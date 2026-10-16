@@ -38,7 +38,7 @@ export default function Navbar() {
         <nav className={`hidden md:flex items-center gap-10 text-sm font-bold tracking-wide transition-colors ${scrolled ? "text-blush/90" : "text-maroon/80"}`}>
           <Link href="/" className={`transition-colors ${scrolled ? "hover:text-white" : "hover:text-rose"}`}>HOME</Link>
           <Link href="/shop" className={`transition-colors ${scrolled ? "hover:text-white" : "hover:text-rose"}`}>SHOP</Link>
-          <Link href="/#contact" className={`transition-colors ${scrolled ? "hover:text-white" : "hover:text-rose"}`}>CONTACT</Link>
+          <Link href="/contact" className={`transition-colors ${scrolled ? "hover:text-white" : "hover:text-rose"}`}>CONTACT</Link>
         </nav>
 
         {/* Desktop Actions */}
@@ -50,7 +50,7 @@ export default function Navbar() {
             </span>
           </Link>
 
-          <Link href="/checkout" className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold transition-all shadow-md hover:-translate-y-0.5 ${scrolled ? "bg-blush text-maroon hover:bg-white" : "bg-maroon text-blush hover:bg-rose hover:text-white"}`}>
+          <Link href="/custom-order" className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold transition-all shadow-md hover:-translate-y-0.5 ${scrolled ? "bg-blush text-maroon hover:bg-white" : "bg-maroon text-blush hover:bg-rose hover:text-white"}`}>
             <Heart size={16} /> Custom Order
           </Link>
         </div>
@@ -76,10 +76,10 @@ export default function Navbar() {
       <div className={`absolute top-full left-0 right-0 bg-[#fffafa] border-b border-rose/20 md:hidden flex flex-col px-6 py-6 gap-4 transition-all duration-300 origin-top shadow-xl ${mobileMenuOpen ? "opacity-100 scale-y-100" : "opacity-0 scale-y-0 pointer-events-none"}`}>
         <Link href="/" onClick={() => setMobileMenuOpen(false)} className="text-maroon text-lg font-medium hover:text-rose py-2">Home</Link>
         <Link href="/shop" onClick={() => setMobileMenuOpen(false)} className="text-maroon text-lg font-medium hover:text-rose py-2">Shop</Link>
-        <Link href="/#contact" onClick={() => setMobileMenuOpen(false)} className="text-maroon text-lg font-medium hover:text-rose py-2">Contact</Link>
+        <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="text-maroon text-lg font-medium hover:text-rose py-2">Contact</Link>
         
         <div className="mt-4">
-          <Link href="/checkout" onClick={() => setMobileMenuOpen(false)} className="flex w-full items-center justify-center gap-2 bg-maroon text-blush px-5 py-4 rounded-2xl text-base font-bold shadow-md hover:bg-rose transition-colors">
+          <Link href="/custom-order" onClick={() => setMobileMenuOpen(false)} className="flex w-full items-center justify-center gap-2 bg-maroon text-blush px-5 py-4 rounded-2xl text-base font-bold shadow-md hover:bg-rose transition-colors">
             Custom Order <Heart size={18} />
           </Link>
         </div>
